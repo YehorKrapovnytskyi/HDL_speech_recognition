@@ -1,12 +1,12 @@
 %% Initialize filter parameters
 B = 16;
-R = 80;                           % Decimation Ratio
+R = 125;                          % Decimation factor
 N = 2;                            % Order
 M = 1;                            % Diff delay
 NFFT = 2 ^ 16;
 ff = 0:1/NFFT:1-1/NFFT;
 
-Fs = 1.28e6;                      % Set sampling rate
+Fs = 2e6;                      % Set sampling rate
 ts = 1/Fs;   
 Fc = 8000;
 Fo = Fc * R / Fs ;                % Normalized cutoff
@@ -34,8 +34,20 @@ hz = round(h * power(2, B - 1) - 1);  % Fixed point coefficients
 
 %% Calculate FIR filter real frequency response
 hFFT_db = 20 * log10(abs(fft(hz, length(HCIC))));
-hFFT_db = hFFT - max(hFFT);
+hFFT_db = hFFT_db - max(hFFT_db);
 result_response = hFFT_db + HCICdb;
+
+%% Parameters for HDL Simulink model
+CLK_DECIMATION_FACTOR = 50; % 100 MHz / 50 = 2 MHz
+
+
+
+
+
+
+
+
+
 
 %% Plot filter response                      
 figure("name", "CIC filter response with FIR compensation", 'Numbertitle', 'off');
