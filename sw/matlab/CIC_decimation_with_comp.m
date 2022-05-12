@@ -28,9 +28,9 @@ Mp = ones(1, length(fp));             % Pass band response; Mp(1)=1
 Mp(2:end) = abs(M * R * sin(pi * fp(2:end) / R)./ sin(pi * M * fp(2:end))) .^ N; 
 Mf = [Mp zeros(1, length(fs))];
 f(end) = 1;
-h = fir2(L, f, Mf);                   % Filter length L+1
-h = h / max(h);                       % Floating point coefficients
-hz = round(h * power(2, B - 1) - 1);  % Fixed point coefficients
+h = fir2(L, f, Mf);                          % Filter length L+1
+h = h / max(h);                              % Floating point coefficients
+hz = int16(round(h * power(2, B - 1) - 1));  % Fixed point coefficients
 
 %% Calculate FIR filter real frequency response
 hFFT_db = 20 * log10(abs(fft(hz, length(HCIC))));
@@ -38,7 +38,12 @@ hFFT_db = hFFT_db - max(hFFT_db);
 result_response = hFFT_db + HCICdb;
 
 %% Parameters for HDL Simulink model
-CLK_DECIMATION_FACTOR = 50; % 100 MHz / 50 = 2 MHz
+OVERSAMPLING_FACTOR = 50; % 100 MHz / 50 = 2 MHz
+clock_rate = OVERSAMPLING_FACTOR * Fs;
+ftest1 = 1e3;
+ftest2 = 4e3;
+ftest3 = 6e3;
+ftest4 = 8e3;
 
 
 
