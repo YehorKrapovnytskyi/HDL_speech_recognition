@@ -1,0 +1,323 @@
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do sim.do
+# if { [file exists work] } {
+#     vdel -all
+# }
+# 
+# Create new modelsim working library
+# 
+# vlib work
+# 
+# Compile all the Verilog sources in current folder into working library
+# 
+# vlog ../test_models/sv/test_package.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:33:43 on Jun 02,2022
+# vlog -reportprogress 300 ../test_models/sv/test_package.sv 
+# -- Compiling package test_package
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:33:43 on Jun 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../test_models/c/*.c -dpiheader ../test_models/c/dpiheader.h
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:33:43 on Jun 02,2022
+# vlog -reportprogress 300 ../test_models/c/test_functions.c -dpiheader ../test_models/c/dpiheader.h 
+# -- Compiling DPI/PLI C file ../test_models/c/test_functions.c
+# 
+# ../test_models/c/test_functions.c:19:2: warning: no newline at end of file
+# 
+# End time: 18:33:44 on Jun 02,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# ** Warning: (vlog-7035) Skip generating the empty DPI header '../test_models/c/dpiheader.h'.
+# 
+# vlog ../test_models/sv/*.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:33:44 on Jun 02,2022
+# vlog -reportprogress 300 ../test_models/sv/clock_generator.sv ../test_models/sv/ds_modulator.sv ../test_models/sv/sine_cos_gen.sv ../test_models/sv/test_package.sv ../test_models/sv/top.sv 
+# -- Compiling module clock_generator
+# -- Compiling module ds_modulator
+# -- Compiling module sine_cos_gen
+# -- Importing package test_package
+# -- Compiling package test_package
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 18:33:44 on Jun 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../CIC_decimator_HDL_model/*.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:33:44 on Jun 02,2022
+# vlog -reportprogress 300 ../CIC_decimator_HDL_model/CIC_decimator.v ../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v ../CIC_decimator_HDL_model/FIR_compensator.v ../CIC_decimator_HDL_model/scaling_to_16bit.v 
+# -- Compiling module CIC_decimator
+# -- Compiling module CIC_decimator_HDL_model
+# -- Compiling module FIR_compensator
+# -- Compiling module scaling_to_16bit
+# 
+# Top level modules:
+# 	CIC_decimator_HDL_model
+# End time: 18:33:44 on Jun 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# 
+# 
+# 
+# Open testbench module for simulation
+# 
+# vsim -t 1ns -voptargs=+acc top
+# vsim -t 1ns -voptargs="+acc" top 
+# Start time: 18:33:44 on Jun 02,2022
+# Loading sv_std.std
+# Loading work.top
+# Loading work.clock_generator
+# Loading work.test_package
+# Loading work.sine_cos_gen
+# Loading work.ds_modulator
+# Loading work.CIC_decimator_HDL_model
+# Loading work.CIC_decimator
+# Loading work.FIR_compensator
+# Loading work.scaling_to_16bit
+# ** Warning: (vsim-3015) ../test_models/sv/top.sv(43): [PCDPC] - Port size (2) does not match connection size (3) for port 'i_pdm_speach_data'. The port definition is at: ../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v(44).
+#    Time: 0 ns  Iteration: 0  Instance: /top/cic_inst1 File: ../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v
+# Loading C:/Users/MrGoshak/AppData/Local/Temp\MrGoshak@DESKTOP-HQFE32B_dpi_66144\win32pe_gcc-4.2.1\vsim_auto_compile.dll
+# 
+# Add all testbench signals to waveform diagram
+# 
+# add wave  /top/*
+#add wave  /top/agc_inst0/adder_inst0/*
+#add wave  /top/agc_inst0/output_acc_inst0/*
+# 
+# onbreak resume
+# 
+# configure wave -timelineunits us
+# Run simulation
+# run -all
+# ** Note: $finish    : ../test_models/sv/top.sv(57)
+#    Time: 2500005 ns  Iteration: 0  Instance: /top
+# 1
+# Break in Module top at ../test_models/sv/top.sv line 57
+# 
+# wave zoom full
+# 0 ns
+# 2625005 ns
+do sim.do
+# if { [file exists work] } {
+#     vdel -all
+# }
+# Error 31: Unable to unlink file "D:/Yehor/diploma/HDL_speech_recognition/hw/wkrspc/work/_lib.qdb".
+# Error 133: Unable to remove directory "D:/Yehor/diploma/HDL_speech_recognition/hw/wkrspc/work".
+# 
+# Create new modelsim working library
+# 
+# vlib work
+# ** Error: (vlib-35) Failed to create directory "work".
+# File exists. (errno = EEXIST)
+# 
+# Compile all the Verilog sources in current folder into working library
+# 
+# vlog ../test_models/sv/test_package.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:41:33 on Jun 02,2022
+# vlog -reportprogress 300 ../test_models/sv/test_package.sv 
+# -- Compiling package test_package
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:41:33 on Jun 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../test_models/c/*.c -dpiheader ../test_models/c/dpiheader.h
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:41:34 on Jun 02,2022
+# vlog -reportprogress 300 ../test_models/c/test_functions.c -dpiheader ../test_models/c/dpiheader.h 
+# -- Compiling DPI/PLI C file ../test_models/c/test_functions.c
+# 
+# ../test_models/c/test_functions.c:19:2: warning: no newline at end of file
+# 
+# End time: 18:41:34 on Jun 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# ** Warning: (vlog-7035) Skip generating the empty DPI header '../test_models/c/dpiheader.h'.
+# 
+# vlog ../test_models/sv/*.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:41:34 on Jun 02,2022
+# vlog -reportprogress 300 ../test_models/sv/clock_generator.sv ../test_models/sv/ds_modulator.sv ../test_models/sv/sine_cos_gen.sv ../test_models/sv/test_package.sv ../test_models/sv/top.sv 
+# -- Compiling module clock_generator
+# -- Compiling module ds_modulator
+# -- Compiling module sine_cos_gen
+# -- Importing package test_package
+# -- Compiling package test_package
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 18:41:34 on Jun 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../CIC_decimator_HDL_model/*.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:41:34 on Jun 02,2022
+# vlog -reportprogress 300 ../CIC_decimator_HDL_model/CIC_decimator.v ../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v ../CIC_decimator_HDL_model/FIR_compensator.v ../CIC_decimator_HDL_model/scaling_to_16bit.v 
+# -- Compiling module CIC_decimator
+# -- Compiling module CIC_decimator_HDL_model
+# -- Compiling module FIR_compensator
+# -- Compiling module scaling_to_16bit
+# 
+# Top level modules:
+# 	CIC_decimator_HDL_model
+# End time: 18:41:34 on Jun 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# 
+# 
+# 
+# Open testbench module for simulation
+# 
+# vsim -t 1ns -voptargs=+acc top
+# End time: 18:41:40 on Jun 02,2022, Elapsed time: 0:07:56
+# Errors: 0, Warnings: 1
+# vsim -t 1ns -voptargs="+acc" top 
+# Start time: 18:41:40 on Jun 02,2022
+# Loading sv_std.std
+# Loading work.top
+# Loading work.clock_generator
+# Loading work.test_package
+# Loading work.sine_cos_gen
+# Loading work.ds_modulator
+# Loading work.CIC_decimator_HDL_model
+# Loading work.CIC_decimator
+# Loading work.FIR_compensator
+# Loading work.scaling_to_16bit
+# ** Warning: (vsim-3015) ../test_models/sv/top.sv(43): [PCDPC] - Port size (2) does not match connection size (3) for port 'i_pdm_speach_data'. The port definition is at: ../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v(44).
+#    Time: 0 ns  Iteration: 0  Instance: /top/cic_inst1 File: ../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v
+# Loading C:/Users/MrGoshak/AppData/Local/Temp\MrGoshak@DESKTOP-HQFE32B_dpi_45268\win32pe_gcc-4.2.1\vsim_auto_compile.dll
+# 
+# Add all testbench signals to waveform diagram
+# 
+# add wave  /top/*
+#add wave  /top/agc_inst0/adder_inst0/*
+#add wave  /top/agc_inst0/output_acc_inst0/*
+# 
+# onbreak resume
+# 
+# configure wave -timelineunits us
+# Run simulation
+# run -all
+# ** Note: $finish    : ../test_models/sv/top.sv(57)
+#    Time: 25000005 ns  Iteration: 0  Instance: /top
+# 1
+# Break in Module top at ../test_models/sv/top.sv line 57
+# 
+# wave zoom full
+# 0 ns
+# 26250005 ns
+do sim.do
+# if { [file exists work] } {
+#     vdel -all
+# }
+# 
+# Create new modelsim working library
+# 
+# vlib work
+# 
+# Compile all the Verilog sources in current folder into working library
+# 
+# vlog ../test_models/sv/test_package.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:47:01 on Jun 02,2022
+# vlog -reportprogress 300 ../test_models/sv/test_package.sv 
+# -- Compiling package test_package
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:47:01 on Jun 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../test_models/c/*.c -dpiheader ../test_models/c/dpiheader.h
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:47:01 on Jun 02,2022
+# vlog -reportprogress 300 ../test_models/c/test_functions.c -dpiheader ../test_models/c/dpiheader.h 
+# -- Compiling DPI/PLI C file ../test_models/c/test_functions.c
+# 
+# ../test_models/c/test_functions.c:19:2: warning: no newline at end of file
+# 
+# End time: 18:47:02 on Jun 02,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# ** Warning: (vlog-7035) Skip generating the empty DPI header '../test_models/c/dpiheader.h'.
+# 
+# vlog ../test_models/sv/*.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:47:02 on Jun 02,2022
+# vlog -reportprogress 300 ../test_models/sv/clock_generator.sv ../test_models/sv/ds_modulator.sv ../test_models/sv/sine_cos_gen.sv ../test_models/sv/test_package.sv ../test_models/sv/top.sv 
+# -- Compiling module clock_generator
+# -- Compiling module ds_modulator
+# -- Compiling module sine_cos_gen
+# -- Importing package test_package
+# -- Compiling package test_package
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 18:47:02 on Jun 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../CIC_decimator_HDL_model/*.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:47:02 on Jun 02,2022
+# vlog -reportprogress 300 ../CIC_decimator_HDL_model/CIC_decimator.v ../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v ../CIC_decimator_HDL_model/FIR_compensator.v ../CIC_decimator_HDL_model/scaling_to_16bit.v 
+# -- Compiling module CIC_decimator
+# -- Compiling module CIC_decimator_HDL_model
+# -- Compiling module FIR_compensator
+# -- Compiling module scaling_to_16bit
+# 
+# Top level modules:
+# 	CIC_decimator_HDL_model
+# End time: 18:47:02 on Jun 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# 
+# 
+# 
+# Open testbench module for simulation
+# 
+# vsim -t 1ns -voptargs=+acc top
+# End time: 18:47:05 on Jun 02,2022, Elapsed time: 0:05:25
+# Errors: 0, Warnings: 1
+# vsim -t 1ns -voptargs="+acc" top 
+# Start time: 18:47:06 on Jun 02,2022
+# Loading sv_std.std
+# Loading work.top
+# Loading work.clock_generator
+# Loading work.test_package
+# Loading work.sine_cos_gen
+# Loading work.ds_modulator
+# Loading work.CIC_decimator_HDL_model
+# Loading work.CIC_decimator
+# Loading work.FIR_compensator
+# Loading work.scaling_to_16bit
+# ** Warning: (vsim-3015) ../test_models/sv/top.sv(43): [PCDPC] - Port size (2) does not match connection size (3) for port 'i_pdm_speach_data'. The port definition is at: ../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v(44).
+#    Time: 0 ns  Iteration: 0  Instance: /top/cic_inst1 File: ../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v
+# Loading C:/Users/MrGoshak/AppData/Local/Temp\MrGoshak@DESKTOP-HQFE32B_dpi_59616\win32pe_gcc-4.2.1\vsim_auto_compile.dll
+# 
+# Add all testbench signals to waveform diagram
+# 
+# add wave  /top/*
+#add wave  /top/agc_inst0/adder_inst0/*
+#add wave  /top/agc_inst0/output_acc_inst0/*
+# 
+# onbreak resume
+# 
+# configure wave -timelineunits us
+# Run simulation
+# run -all
+# ** Note: $finish    : ../test_models/sv/top.sv(57)
+#    Time: 25000005 ns  Iteration: 0  Instance: /top
+# 1
+# Break in Module top at ../test_models/sv/top.sv line 57
+# 
+# wave zoom full
+# 0 ns
+# 26250005 ns
+# End time: 23:23:37 on Jun 03,2022, Elapsed time: 28:36:31
+# Errors: 0, Warnings: 1

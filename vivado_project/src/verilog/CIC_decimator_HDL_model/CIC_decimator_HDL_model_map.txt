@@ -1,0 +1,4 @@
+CIC_decimator_HDL_model/CIC_decimator_HDL_model/CIC_decimator --> CIC_decimator
+CIC_decimator_HDL_model/CIC_decimator_HDL_model/FIR_compensator --> FIR_compensator
+CIC_decimator_HDL_model/CIC_decimator_HDL_model/scaling_to_16bit --> scaling_to_16bit
+CIC_decimator_HDL_model/CIC_decimator_HDL_model --> CIC_decimator_HDL_model

@@ -1,0 +1,208 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Yehor/diploma/HDL_speech_recognition/hw/wkrspc
+vCIC_decimator
+Z1 !s110 1654184822
+!i10b 1
+!s100 f@[<Y[S[V?k_ejRcXOcWe0
+I9j9bz1CgEiiHcRBTd5ce13
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1653076372
+8../CIC_decimator_HDL_model/CIC_decimator.v
+F../CIC_decimator_HDL_model/CIC_decimator.v
+Z4 L0 21
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1654184822.000000
+Z7 !s107 ../CIC_decimator_HDL_model/scaling_to_16bit.v|../CIC_decimator_HDL_model/FIR_compensator.v|../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v|../CIC_decimator_HDL_model/CIC_decimator.v|
+Z8 !s90 -reportprogress|300|../CIC_decimator_HDL_model/CIC_decimator.v|../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v|../CIC_decimator_HDL_model/FIR_compensator.v|../CIC_decimator_HDL_model/scaling_to_16bit.v|
+!i113 1
+Z9 tCvgOpt 0
+n@c@i@c_decimator
+vCIC_decimator_HDL_model
+R1
+!i10b 1
+!s100 @5UFWgV;Nj;IGYz6Zenk@3
+IiIzKAeTo[?JH58QVUgE2S3
+R2
+R0
+R3
+8../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v
+F../CIC_decimator_HDL_model/CIC_decimator_HDL_model.v
+L0 40
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+n@c@i@c_decimator_@h@d@l_model
+vclock_generator
+Z10 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R1
+!i10b 1
+!s100 _ocEUP3g8Le5Yn^@F;:7[1
+Iho8oAQfQi_EGzfN>Don8Z3
+R2
+!s105 clock_generator_sv_unit
+S1
+R0
+w1653070047
+8../test_models/sv/clock_generator.sv
+F../test_models/sv/clock_generator.sv
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+Z11 !s107 ../test_models/sv/top.sv|../test_models/sv/test_package.sv|../test_models/sv/sine_cos_gen.sv|../test_models/sv/ds_modulator.sv|../test_models/sv/clock_generator.sv|
+Z12 !s90 -reportprogress|300|../test_models/sv/clock_generator.sv|../test_models/sv/ds_modulator.sv|../test_models/sv/sine_cos_gen.sv|../test_models/sv/test_package.sv|../test_models/sv/top.sv|
+!i113 1
+R9
+vds_modulator
+R10
+R1
+!i10b 1
+!s100 ]1Jj^o:iOdRRcBgMe2Vz_1
+I0KbQYC`8=5zA`2U=SQm>?1
+R2
+!s105 ds_modulator_sv_unit
+S1
+R0
+w1653068627
+8../test_models/sv/ds_modulator.sv
+F../test_models/sv/ds_modulator.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R11
+R12
+!i113 1
+R9
+vFIR_compensator
+R1
+!i10b 1
+!s100 9LBNSCHK?>S@A=LQnGWZZ0
+I_ZcSBk7iaU1K4kL_MEm:93
+R2
+R0
+R3
+8../CIC_decimator_HDL_model/FIR_compensator.v
+F../CIC_decimator_HDL_model/FIR_compensator.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+n@f@i@r_compensator
+vscaling_to_16bit
+R1
+!i10b 1
+!s100 kBcR;_U6440O5NeAMKOW71
+Ijef9:0Qb7b_<]Po3XV7O40
+R2
+R0
+R3
+8../CIC_decimator_HDL_model/scaling_to_16bit.v
+F../CIC_decimator_HDL_model/scaling_to_16bit.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+vsine_cos_gen
+R10
+DXx4 work 12 test_package 0 22 1ka3Rg6dR7:E]C=SkkDDC1
+R1
+!i10b 1
+!s100 ?Gbf[eZ>_?^Y]eb;HbOYL3
+IYA?S;@@Rjod@0:>n>K27V2
+R2
+!s105 sine_cos_gen_sv_unit
+S1
+R0
+w1653063860
+8../test_models/sv/sine_cos_gen.sv
+F../test_models/sv/sine_cos_gen.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R6
+R11
+R12
+!i113 1
+R9
+Xtest_package
+R10
+R1
+!i10b 1
+!s100 UOb?F<7DU1@jBeJXG_l0=2
+I1ka3Rg6dR7:E]C=SkkDDC1
+V1ka3Rg6dR7:E]C=SkkDDC1
+S1
+R0
+w1648571526
+8../test_models/sv/test_package.sv
+F../test_models/sv/test_package.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R11
+R12
+!i113 1
+R9
+vtop
+R10
+R1
+!i10b 1
+!s100 135_kDOk7nScdkkTUVS0g3
+I:alUVd<lZo_CnVViB6N?X3
+R2
+!s105 top_sv_unit
+S1
+R0
+w1654184806
+8../test_models/sv/top.sv
+F../test_models/sv/top.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R6
+R11
+R12
+!i113 1
+R9
