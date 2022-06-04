@@ -1,1 +1,1 @@
-# HDL_speach_recognition
+# HDL_speech_recognition
